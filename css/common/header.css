@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+
+.header{
+  width: 100%;
+  height: auto;
+}
+.header .inner-header{
+  width: 100%;
+  height: auto;
+  /* background-color: #f00; */
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.header .inner-header .nav{
+  flex: 0 1 1000px;
+  height: 100px;
+  /* background-color: rgb(255, 145, 0); */
+  /* background-color: #000; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+.header .inner-header .nav h1.logo{
+  flex: 0 1 10%;
+  box-sizing: border-box;
+}
+.header .inner-header .nav h1.logo img{
+  width: 100%;
+  height: auto;
+  display: block;
+  box-sizing: border-box;
+}
+.header .inner-header .nav .gnb{
+  flex: 0 1 70%;
+  /* border: 1px solid; */
+}
+.header .inner-header .nav .gnb >ul{
+  display: flex;
+  justify-content: space-between;
+}
+.header .inner-header .nav .gnb >ul>li{
+  /* border: 1px solid; */
+  flex: 1;
+  line-height: 40px;
+  text-align: center;
+  margin: 3px;
+}
+.header .inner-header .nav .gnb >ul>li a{
+  color: #fff;
+  position: relative;
+}
+.header .inner-header .nav .gnb ul>li a::after {
+  content: '';
+  display: block;
+  clear: both;
+  background-color: #fff;
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -5px;
+  transition: all 0.5s;
+}
+.header .inner-header .nav .gnb ul>li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.header .inner-header .menu{
+  display: none;
+}
+
+@media only screen and (max-width:767px){
+  .header .inner-header .nav h1.logo{
+    display: none;
+  }
+  .header .inner-header .nav .gnb{
+    display: none;
+  }
+  .header .inner-header .menu{
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    color: #fff;
+    /* background-color: #0f0; */
+    background-color: #000;
+    font-size: 40px;
+    text-align: center;
+    line-height: 70px;
+    z-index: 999;
+    margin: 0 10px;
+  }
+  .header .inner-header .menu:hover{
+    background-color: rgb(54, 54, 54);
+  }
+  
+}
